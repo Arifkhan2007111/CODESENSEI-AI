@@ -47,7 +47,7 @@ app.post('/login', async (req, res) =>{
         const ismatch = await bcrypt.compare(upassword, user.Password)
         if(!ismatch) return res.status(400).json({ error:'Invalid Username or Password' })
         
-        const token = jwt.sign({ id:user._id }, process.env.JWT_SECRET)
+        const token = jwt.sign({ id:user._id }, "123459")
         res.status(200).json({ message:'Login Sucessfull', token })
     }catch(error){
         console.log("Error While Login")
@@ -60,7 +60,7 @@ const authenticate = (req, res, next) =>{
     if(!token) return res.status(400).json({error : 'Access Failed'})
     
     try{
-        const verify = jwt.verify(token, process.env.JWT_SECRET)
+        const verify = jwt.verify(token, "123459")
         req.user = verify
         next()
     }catch(error){
