@@ -1,0 +1,394 @@
+html, body, .main
+{
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    color: white;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+/* Login Page */
+
+.login{
+    display: flex;
+}
+
+.login-left, .login-right{
+    height: 100vh;
+    flex-basis: 50%;
+}
+
+.login-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-right{
+    background-color: #404258;
+    border-radius: 2rem 0 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.login-head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-head h1{
+    font-size: 64px;
+    font-weight: 600;
+    letter-spacing: 7px;
+}
+
+.login-head h5{
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.inline{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-inputs{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.l-img{
+    width: 30px;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    opacity: 50%;
+}
+
+.l-input{
+    width: 100%;
+    padding: 10px 50px;
+    border-radius: 10px;
+    background-color: #474E68;
+    outline: none;
+    color: white;
+    border: 2px solid white;
+    font-size: 16px;
+}
+
+.l-other{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.l-checkbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.l-checkbox input[type="checkbox"]{
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background-color: #474E68; /* Background color when unchecked */
+    border: 2px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+
+.l-checkbox input[type="checkbox"]:checked {
+    background-color: #474E68; /* Change color when checked */
+}
+
+.l-checkbox input[type="checkbox"]::before {
+    content: "👍";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: black; */
+    border-radius: 2px;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Hidden when unchecked */
+}
+
+.l-checkbox input[type="checkbox"]:checked::before {
+    opacity: 1; /* Show checkmark effect */
+}
+
+.l-checkbox p{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.l-forgot p {
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.login-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    width: 500px;
+}
+
+.l-btn{
+    width: 100%;
+    padding: 15px 0;
+    background-color: #4E888F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    user-select: none;
+    transition: .1s ease-in;
+}
+
+.l-btn:hover{
+    background-color: #55a0a8;
+    border-radius: 10px;
+}
+
+.l-btn p{
+    width: 500px;
+    height: 100%;
+    font-size: 16px;
+    text-align: center;
+}
+
+.l-register p a{
+    text-decoration: underline;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Nav Page */
+
+.nav{
+    width: 100vw;
+    height: 7rem;
+    /* padding: 0px 1.5rem; */
+    background-color: #404258;
+    border-radius: 0px 0px 1.5rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-header :first-child{
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+      
+}
+
+.nav-header :nth-child(2){
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.nav-profile{
+    display: flex;
+    align-items: center;
+    padding-right: 3.5rem;
+    gap: 1rem;
+}
+
+.nav-profile img{
+    width: 4rem;
+    border-radius: 50%;
+}
+.nav-profile :nth-child(3){
+    width: 2.5rem;
+}
+
+/* UI of my project */
+
+#root1{
+    width: 100%;
+    height: 88.7%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.left{
+    position: relative;
+    height: 95%;
+    flex-basis: 49%;
+    background-color: #2C3639;
+    border-radius: 1rem;
+}
+
+.submit-btn{
+    position: absolute;
+    width: 150px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #76ABAE;
+    border-radius: 0.5rem;
+    bottom: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.submit-btn h2{
+    color: #000;
+    font-weight: 600;
+}
+
+.wrapper{
+    height: 10%;
+    display: grid;
+    place-items: center;
+}
+
+.typing-demo{
+    width: 400px;
+    animation: typing 3s steps(23), blink .3s step-end infinite alternate;
+    animation: typing 3s steps(23) infinite alternate, blink 1s step-end infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-size: 2em;
+}
+
+@keyframes typing{
+    from{
+        width: 0;
+    }
+}
+
+@keyframes blink{
+    50%{
+        border-color: transparent;
+    }
+}
+
+.code {
+    flex: 1;
+    min-height: 80%;
+    max-height: 80%; 
+    overflow-y: auto;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* Example - Webkit-based browsers (Chrome, Safari) */
+.code::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.code::-webkit-scrollbar-thumb {
+    background-color: #666; /* Color of the thumb */
+    border-radius: 4px;
+}
+
+.code::-webkit-scrollbar-track {
+    background-color: #333; /* Color of the track */
+}
+
+.code textarea,
+.code pre {
+  font-family: "Fira Code", monospace;
+  font-size: 16px;
+  color: #f8f8f2;
+  background: transparent;
+  line-height: 1.5;
+  padding: 10px;
+  border: none;
+  outline: none;
+  width: 100%;
+  min-height: 100%;
+  resize: none;
+  white-space: pre-wrap; 
+  word-break: break-word;
+}
+
+.code, .code textarea, .code pre, .code code {
+    font-family: "Fira Code", monospace;
+    font-size: 16px !important; 
+    line-height: 1.5;
+    background: transparent;
+    color: #f8f8f2;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.code ::selection {
+    background: rgba(173, 216, 230, 0.5);
+    font-size: 16px;
+}
+
+.right{
+    height: 95%;
+    flex-basis: 49%;
+    background-color: #474E68;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.right ::selection{
+    background: rgba(173, 216, 230, 0.5);
+}
+
+.right::-webkit-scrollbar {
+    width: 8px;
+}
+
+.right::-webkit-scrollbar-track {
+    background: #222;
+    border-radius: 10px;
+}
+
+.right::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #444, #666);
+    border-radius: 10px;
+}
+
+.right::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #555, #777);
+}
