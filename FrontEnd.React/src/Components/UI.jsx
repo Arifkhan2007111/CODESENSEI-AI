@@ -20,7 +20,7 @@ const UI = ()=> {
 
     async function reviewCode() {
         try {
-            const response = await axios.post('http://localhost:8000/ai/get-review', { prompt: code });
+            const response = await axios.post('https://codesensei-ai-backend.vercel.app/ai/get-review', { prompt: code });
             setReview(response.data)
         } catch (error) {
             console.error("Error reviewing code:", error.response ? error.response.data : error.message);

@@ -16,7 +16,7 @@ const Login = ()=>{
         e.preventDefault()
 
         try{
-            const { data } = await axios.post('http://localhost:8000/login', { uemail, upassword })
+            const { data } = await axios.post('https://codesensei-ai-backend.vercel.app/login', { uemail, upassword })
             setmessage(data.message)
             localStorage.setItem( 'token', data.token )
             navigate('/dashboard')

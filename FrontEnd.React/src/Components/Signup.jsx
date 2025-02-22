@@ -18,7 +18,7 @@ const Signup = ()=>{
     const submit = async (e)=>{
         e.preventDefault()
         try{
-            const { data } = await axios.post('http://localhost:8000/register', { uName, uemail, upassword })
+            const { data } = await axios.post('https://codesensei-ai-backend.vercel.app/register', { uName, uemail, upassword })
             setmessage(data.message)
         }catch(error){
             console.log("Error this is", error)

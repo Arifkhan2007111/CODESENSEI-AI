@@ -15,7 +15,7 @@ const Nav = ()=>{
             const token = localStorage.getItem('token');
     
             try{
-                const response = await fetch('http://localhost:8000/users', {
+                const response = await fetch('https://codesensei-ai-backend.vercel.app/users', {
                     headers:{
                         'Authorization' : token,
                     },
